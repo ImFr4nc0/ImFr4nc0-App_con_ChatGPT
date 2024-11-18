@@ -14,7 +14,7 @@ if "finanzas" not in st.session_state:
         "presupuestos": [],
         "ingresos": [],
         "gastos": [],
-        "metas_ahorro": []
+        "ahorro": []
     }
 
 # Función para registrar datos
@@ -50,7 +50,7 @@ st.subheader("Registro de Metas de Ahorro")
 meta_categoria = st.text_input("Meta de ahorro:")
 meta_monto = st.number_input("Monto de la meta de ahorro:", min_value=0.0, step=0.01)
 if st.button("Agregar meta de ahorro"):
-    registrar_dato("metas_ahorro", meta_categoria, meta_monto, datetime.now())
+    registrar_dato("ahorro", meta_categoria, meta_monto, datetime.now())
     st.success("Meta de ahorro registrada.")
 
 # Mostrar los datos registrados
