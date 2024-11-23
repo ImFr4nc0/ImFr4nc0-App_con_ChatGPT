@@ -4,6 +4,30 @@ import requests
 # URL de la API para obtener las tasas de cambio
 API_URL = "https://api.exchangerate-api.com/v4/latest/USD"
 
+# Diccionario con la moneda y su país o región
+monedas_a_paises = {
+    "USD": "Estados Unidos",
+    "EUR": "Zona Euro (Alemania, Francia, España, etc.)",
+    "GBP": "Reino Unido",
+    "JPY": "Japón",
+    "AUD": "Australia",
+    "CAD": "Canadá",
+    "CHF": "Suiza",
+    "CNY": "China",
+    "INR": "India",
+    "BRL": "Brasil",
+    "MXN": "México",
+    "ARS": "Argentina",
+    "CLP": "Chile",
+    "COP": "Colombia",
+    "SEK": "Suecia",
+    "NOK": "Noruega",
+    "DKK": "Dinamarca",
+    "KRW": "Corea del Sur",
+    "RUB": "Rusia",
+    "ZAR": "Sudáfrica"
+}
+
 # Función para obtener las tasas de cambio
 def obtener_tasas():
     response = requests.get(API_URL)
@@ -17,7 +41,6 @@ def obtener_tasas():
 st.title("💱 Conversor de Monedas")
 
 # Descripción de la app
-st.write("Esta app fue elaborada por Alejandro Gomez Franco.")
 st.write("Convierta una moneda a otra usando tasas de cambio actualizadas.")
 
 # Obtener las tasas de cambio
@@ -33,6 +56,10 @@ if tasas:
 
     # Campo para ingresar la cantidad a convertir
     cantidad = st.number_input(f"Ingrese la cantidad en {moneda_origen}", min_value=0.01, step=0.01)
+
+    # Mostrar el país o región correspondiente a la moneda de origen y destino
+    st.write(f"Moneda de origen: {moneda_origen} - {monedas_a_paises.get(moneda_origen, 'Desconocido')}")
+    st.write(f"Moneda de destino: {moneda_destino} - {monedas_a_paises.get(moneda_destino, 'Desconocido')}")
 
     # Convertir la cantidad
     if cantidad > 0:
