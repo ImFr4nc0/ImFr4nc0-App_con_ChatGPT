@@ -4,7 +4,7 @@ import requests
 # URL de la API para obtener las tasas de cambio
 API_URL = "https://api.exchangerate-api.com/v4/latest/USD"
 
-# Diccionario con la moneda y su país o región
+# Diccionario con la moneda y su país o región (basado en ISO 4217)
 monedas_a_paises = {
     "USD": "Estados Unidos",
     "EUR": "Zona Euro (Alemania, Francia, España, etc.)",
@@ -25,7 +25,34 @@ monedas_a_paises = {
     "DKK": "Dinamarca",
     "KRW": "Corea del Sur",
     "RUB": "Rusia",
-    "ZAR": "Sudáfrica"
+    "ZAR": "Sudáfrica",
+    "SGD": "Singapur",
+    "HKD": "Hong Kong",
+    "NZD": "Nueva Zelanda",
+    "TRY": "Turquía",
+    "THB": "Tailandia",
+    "PHP": "Filipinas",
+    "MYR": "Malasia",
+    "PLN": "Polonia",
+    "CZK": "República Checa",
+    "IDR": "Indonesia",
+    "EGP": "Egipto",
+    "KWD": "Kuwait",
+    "SAR": "Arabia Saudita",
+    "VND": "Vietnam",
+    "AED": "Emiratos Árabes Unidos",
+    "HUF": "Hungría",
+    "RON": "Rumania",
+    "BGN": "Bulgaria",
+    "LKR": "Sri Lanka",
+    "UAH": "Ucrania",
+    "PEN": "Perú",
+    "QAR": "Catar",
+    "BHD": "Bahrein",
+    "OMR": "Omán",
+    "KZT": "Kazajistán",
+    "UZS": "Uzbekistán",
+    "JOD": "Jordania"
 }
 
 # Función para obtener las tasas de cambio
