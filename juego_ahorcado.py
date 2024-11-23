@@ -35,6 +35,7 @@ st.subheader(f"Intentos restantes: {st.session_state['intentos_restantes']}")
 if st.session_state["intentos_restantes"] > 0 and "_" in mostrar_palabra(st.session_state["palabra_secreta"], st.session_state["letras_adivinadas"]):
     letra = st.text_input("Ingresa una letra:", max_chars=1).lower()
 
+    # Acción cuando se presiona el botón "Adivinar"
     if st.button("Adivinar"):
         if letra in st.session_state["letras_adivinadas"]:
             st.warning(f"Ya adivinaste la letra '{letra}'. Intenta con otra.")
