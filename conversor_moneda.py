@@ -6,6 +6,7 @@ API_URL = "https://api.exchangerate-api.com/v4/latest/USD"
 
 # Diccionario con la moneda y su país o región (basado en ISO 4217)
 monedas_a_paises = {
+    "USD": "Estados Unidos (Dólar estadounidense)",
     "AED": "Emiratos Árabes Unidos (Dirham de los Emiratos Árabes Unidos)",
     "AFN": "Afganistán (Afgani)",
     "ALL": "Albania (Lek)",
