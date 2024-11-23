@@ -175,6 +175,7 @@ def obtener_tasas():
 st.title("💱 Conversor de Monedas")
 
 # Descripción de la app
+st.write("Esta app fue elaborada por Alejandro Gomez Franco.")
 st.write("Convierta una moneda a otra usando tasas de cambio actualizadas.")
 
 # Obtener las tasas de cambio
